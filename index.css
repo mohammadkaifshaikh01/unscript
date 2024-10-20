@@ -1,0 +1,376 @@
+/* General reset and box-sizing */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   background-color: #ffffff;
+}
+
+/* Body styling */
+body {
+   font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+   display: flex;
+   justify-content: space-evenly; /* Adjust to between for better spacing */
+   align-items: center;
+   padding: 0 2rem;
+   background-color: #fff;
+   position: relative;
+   height: 100px;
+}
+
+.logo img {
+   width: 150px;
+}
+
+.nav-links {
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+}
+
+.nav-links a {
+   text-decoration: none;
+   color: #333;
+   font-size: 1rem;
+   position: relative;
+}
+
+.contact-button {
+   background-color: #0357F7;
+   color: white;
+   border: none;
+   padding: 0.75rem 1.5rem;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.contact-button:hover {
+   background-color: #00009a;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+   position: relative;
+}
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   background-color: #f9f9f9;
+   min-width: 150px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   z-index: 1000;
+}
+
+.dropdown-content a {
+   display: block;
+   padding: 0.75rem 1rem;
+   color: #333;
+   text-decoration: none;
+}
+
+.dropdown-content a:hover {
+   background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+
+/* Hamburger icon */
+.hamburger {
+   display: none;
+   font-size: 1.5rem;
+   cursor: pointer;
+}
+
+/* Responsive navigation for mobile */
+@media (max-width: 768px) {
+   .nav-links {
+       position: absolute;
+       top: 100%;
+       right: 0;
+       background-color: #fff;
+       flex-direction: column;
+       align-items: flex-start;
+       padding: 1rem;
+       display: none;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       z-index: 999;
+   }
+
+   .nav-links.active {
+       display: flex;
+   }
+
+   .hamburger {
+       display: block;
+   }
+
+   .logo img {
+       width: 120px;
+   }
+}
+
+/* Main header section */
+.main-header {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 2rem;
+   padding: 1rem;
+   text-align: center;
+}
+
+.main-header h1 {
+   font-family: 'Mona Sans', sans-serif;
+   font-weight: 700;
+   font-size: 3rem;
+   line-height: 1.2;
+   margin: 0.5rem 0;
+   gap: 2rem;
+}
+
+.main-header p {
+   font-family: 'Inter', sans-serif;
+   font-size: 1rem;
+   font-weight: 500;
+   line-height: 1.5;
+   text-align: center;
+   margin-bottom: 4rem;
+}
+
+/* Input group for forms */
+.input-group {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   width: 100%;
+}
+
+.input-group input {
+   padding: 0.75rem;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 1rem;
+   margin-right: 0;
+   width: 100%;
+   max-width: 250px;
+}
+
+.input-group button {
+   background-color: #0357F7;
+   color: white;
+   border: none;
+   padding: 0.75rem 1.5rem;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 1rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+   .main-header h1 {
+       font-size: 2.5rem;
+   }
+
+   .main-header p {
+       font-size: 0.9rem;
+   }
+
+   .input-group input {
+       max-width: 200px;
+   }
+}
+
+@media (max-width: 480px) {
+   .main-header h1 {
+       font-size: 2rem;
+   }
+
+   .main-header p {
+       font-size: 0.8rem;
+   }
+
+   .input-group input {
+       max-width: 150px;
+   }
+}
+
+/* YouTube video section */
+.img-youtube {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   margin: 0px 20px;
+   width: 100%;
+   text-align: center;
+}
+
+.img-youtube iframe {
+   width: 100%;
+   height: 100%;
+   max-width: 100vw;
+   max-height: 100vh;
+}
+
+.trust {
+   margin-top: 20px;
+   font-size: 24px;
+   color: #333;
+}
+
+/* Text under YouTube video */
+.trust {
+   width: 100%;
+   max-width: 1318px;
+   height: auto;
+   font-family: 'Mona Sans', sans-serif;
+   font-weight: 700;
+   font-size: 2.5rem;
+   line-height: 1.2;
+   text-align: center;
+   margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+   .trust {
+       font-size: 2rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .trust {
+       font-size: 1.5rem;
+   }
+}
+
+/* Section container */
+.section-container {
+   max-width: 1408px;
+   margin: 0 auto;
+}
+
+/* Section styling */
+.section {
+   display: flex;
+   justify-content: space-between;
+   padding: 20px;
+   flex-wrap: wrap;
+}
+
+/* Left and right panels in section */
+.left, .right {
+   flex: 1;
+   padding: 40px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+/* Video text paragraph */
+.video-text {
+   color: #555;
+   font-size: 18px;
+   line-height: 1.5;
+   margin-bottom: 20px;
+}
+
+.right img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 10px;
+   object-fit: cover;
+}
+
+/* Footer section */
+.footer {
+   background-color: #ffffff;
+   color: #000000;
+   padding: 50px 20px;
+}
+
+.footer-content {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.footer-left {
+   flex: 1;
+   min-width: 250px;
+   text-align: left;
+}
+
+.footer-links {
+   display: flex;
+   flex: 3;
+   justify-content: space-between;
+   gap: 40px;
+}
+
+.footer-column {
+   flex: 1;
+   min-width: 150px;
+}
+
+.footer-column h4 {
+   font-size: 18px;
+   margin-bottom: 15px;
+   text-transform: uppercase;
+}
+
+.footer-column ul {
+   list-style: none;
+   padding: 0;
+   text-decoration: none;
+   
+}
+
+.footer-bottom {
+   margin-top: 30px;
+   text-align: center;
+   font-size: 14px;
+   color: #000000;
+}
+
+/* Social Icons */
+.social-icons {
+   display: flex;
+   gap: 15px;
+   margin-top: 20px;
+   justify-content: center;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+   .footer-content {
+       flex-direction: column;
+       text-align: center;
+       align-items: center;
+   }
+
+   .footer-left {
+       text-align: center;
+   }
+
+   .footer-column {
+       margin-bottom: 30px;
+   }
+
+   .social-icons {
+       margin-top: 30px;
+   }
+}
